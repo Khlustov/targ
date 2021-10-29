@@ -78,3 +78,29 @@
 .headerContent p{ 
     font-size: 20px;
 }
+
+@media (max-width: 980px) {
+    .navbarContent, .navbarMask{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .headerTitle {
+        justify-content: center;
+        margin-top: 100px;
+    }
+    .headerContent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .headerContent p, .headerContent h2 {
+        text-align: center;
+    }
+    .headerImage {
+        width: 100%;
+    }
+}
