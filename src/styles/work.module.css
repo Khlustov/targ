@@ -71,3 +71,17 @@
     color: #6c6c6c;
     font-weight: 400;
 }
+
+@media (max-width: 980px) {
+    .title {
+        justify-content: center;
+    }
+    .workCards {
+        width: 100%;
+        flex-direction: column;
+    }
+    .card {
+        width: 80%;
+        margin: 20px 0;
+    }
+}
