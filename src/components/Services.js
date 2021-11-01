@@ -1,7 +1,7 @@
 import React from 'react'
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image'
 import { graphql, useStaticQuery } from 'gatsby'
-import Card from "./Card"
+
 
 import * as styles from '../styles/services.module.css'
 
@@ -25,8 +25,7 @@ const Services = () => {
       }
         `)
         
-    const services = data.allMarkdownRemark.nodes
-    console.log(services);
+    const services = data.allMarkdownRemark.nodes   
     
     return (
         <div className={styles.services}>
@@ -38,8 +37,11 @@ const Services = () => {
                 </div>
                 <div className={styles.cards}>
                     {services.map(service => {
-                        const {title, image} = service.frontmatter
+
+                        const { title, image } = service.frontmatter
+                        const { html } = service                        
                         const img = getImage(image)
+                        
                         return (
                             <div key={service.id} className={styles.card}>
                                 <div className={styles.cardMainLayout}>
@@ -47,6 +49,10 @@ const Services = () => {
                                         <GatsbyImage image={img} alt={title} className={styles.cardImg}/>
                                     </div>
                                     <h4>{title}</h4>
+                                </div>
+                                <div className={styles.cardSecondaryLayout}>
+                                    <p className={styles.cardTitle}>{title}</p>
+                                    <div dangerouslySetInnerHTML={{ __html: html }} className={styles.cardInfo}></div>
                                 </div>
                             </div>
                         )
