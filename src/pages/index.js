@@ -3,11 +3,10 @@ import Header from "../components/Header"
 import HowWeWork from "../components/HowWeWork"
 import Services from "../components/Services"
 import Reviews from "../components/Reviews"
+import Partners from "../components/Partners"
 
 import '../styles/global.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 
 export default function Home() {  
   return (
@@ -16,6 +15,7 @@ export default function Home() {
       <HowWeWork />
       <Services />
       <Reviews />
+      <Partners />
     </div>
   ) 
  

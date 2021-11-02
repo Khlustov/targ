@@ -1,0 +1,28 @@
+.partners {
+    width: 100%;
+    max-width: 1400px;         
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.partnersWrapper {
+    width: 90%;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.links {
+   max-width: 150px;
+   height: auto;
+   margin: 60px 30px;
+   filter: grayscale(100);
+   transition: all ease-in-out 0.3s;
+}
+
+.links:hover {
+    filter: none
+}

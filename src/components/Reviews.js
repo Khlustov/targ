@@ -5,9 +5,9 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 import * as styles from '../styles/reviews.module.css'
 
-export default function Reviews() {
+const Reviews = () => {
     const data = useStaticQuery(graphql`
-    query MyQuery {
+    query ReviewQuery {
         allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(reviews)/"}}) {
           nodes {
             html
@@ -28,7 +28,7 @@ export default function Reviews() {
         `)
 
     const reviews = data.allMarkdownRemark.nodes
-    console.log(reviews);
+    
 
 
     return (
@@ -61,6 +61,8 @@ export default function Reviews() {
         </div>
     )
 }
+
+export default Reviews
 
 
 
