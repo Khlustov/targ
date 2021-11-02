@@ -13,9 +13,9 @@ export default function Header() {
                     <div className={styles.logo}><StaticImage src='../images/logo.png' alt="header-bckgrnd"/></div>
                     <nav>                        
                         <ul className={styles.navlinks}>
-                            <li>Services</li>
-                            <li>Clients</li>
-                            <li>Contact</li>
+                            <li><a href="#services" style={{textDecoration: 'none', color: '#000'}}>Services</a></li>
+                            <li><a href="#clients" style={{textDecoration: 'none', color: '#000'}}>Clients</a></li>
+                            <li><a href="#clients" style={{textDecoration: 'none', color: '#000'}}>Contact</a></li>
                         </ul>
                     </nav>
                 </div>                

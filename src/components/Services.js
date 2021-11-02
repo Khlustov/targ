@@ -28,7 +28,7 @@ const Services = () => {
     const services = data.allMarkdownRemark.nodes   
     
     return (
-        <div className={styles.services}>
+        <div className={styles.services} id="services">
             <div className={styles.servicesImage}><StaticImage src='../images/services-image.webp' alt="background"/></div>
             <div className={styles.servicesWrapper}>
                 <div className={styles.servicesInfo}>

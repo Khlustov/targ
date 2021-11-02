@@ -26,7 +26,7 @@ const Partners = () => {
     const partners = data.allMarkdownRemark.nodes
     
     return (
-        <div className={styles.partners}>
+        <div className={styles.partners} id='clients'>
             <div className={styles.partnersWrapper}>                
                 {partners.map(partner => {
                     const { title, link, image } = partner.frontmatter                                  
@@ -34,7 +34,7 @@ const Partners = () => {
 
                     return (
                         <div key={title} className={styles.links}>
-                            <a href={ link } className={styles.partnerLogo}>
+                            <a href={ link }>
                                 <GatsbyImage image={img} alt={title}/>    
                             </a>                            
                         </div>
