@@ -8,7 +8,7 @@ import * as styles from '../styles/services.module.css'
 const Services = () => {
     const data = useStaticQuery(graphql`
     query Cards {
-        allMarkdownRemark {
+        allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/(services)/"}}){
             nodes {
               frontmatter {
                 image {
