@@ -7,6 +7,7 @@ import Partners from "../components/Partners"
 
 import '../styles/global.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from "../components/Footer"
 
 export default function Home() {  
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Services />
       <Reviews />
       <Partners />
+      <Footer />
     </div>
   ) 
  
