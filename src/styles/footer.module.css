@@ -58,6 +58,7 @@
     border: none;
     border-radius: 10px;
     font-size: 16px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .1);
 }
 
 .form textarea {
@@ -67,6 +68,7 @@
     border: none;
     border-radius: 10px;
     font-size: 16px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .1);
 }
 
 .form button {
@@ -79,4 +81,49 @@
     color: #FFF;
     text-transform: uppercase;
     font-size: 20px;
+}
+
+.contactInfo {
+    width: 100%;
+    margin-top: calc(130px - 0.5vw);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;    
+}
+
+.contacts {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footerLogo {
+    max-width: 150px;
+    height: auto;
+}
+
+.contacts p {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.contacts a {
+    font-size: 16px;
+    color: #FF9100;
+    text-decoration: none;
+}
+
+.socialLink {
+    width: 40px;
+    height: 40px;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }

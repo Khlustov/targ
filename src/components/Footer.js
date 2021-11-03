@@ -47,7 +47,26 @@ export default function Footer() {
                         </form>
                     </div>    
                 </div>
-
+                <div className={styles.contactInfo}>
+                    <div className={styles.contacts}>
+                        <StaticImage src='../images/logo.png' alt="logo" className={styles.footerLogo}/>
+                    </div>
+                    <div className={styles.contacts}>
+                        <p>Contact</p>
+                        <a href='mailto:info@targsoftware.com'>info@targsoftware.com</a>
+                    </div>
+                    <div className={styles.contacts}>
+                        <p>Social</p>
+                        <div className={styles.socialLinks}>
+                            <a href='mailto:info@targsoftware.com' className={styles.socialLink}>
+                                <StaticImage src='../images/facebook-round.png' alt="logo"/>
+                            </a>
+                            <a href='mailto:info@targsoftware.com' className={styles.socialLink}>
+                                <StaticImage src='../images/linkedin-round.png' alt="logo"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
