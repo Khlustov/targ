@@ -32,7 +32,7 @@ const Reviews = () => {
 
 
     return (
-        <div className={styles.reviews}>
+        <div className={styles.reviews} id='clients'>
             <div className={styles.reviewsWrapper}>
                 <h4 className={styles.reviewsTitle}>Our clients love us</h4>
                 <Carousel fade variant="dark">

@@ -26,7 +26,7 @@ const Partners = () => {
     const partners = data.allMarkdownRemark.nodes
     
     return (
-        <div className={styles.partners} id='clients'>
+        <div className={styles.partners}>
             <div className={styles.partnersWrapper}>                
                 {partners.map(partner => {
                     const { title, link, image } = partner.frontmatter                                  
