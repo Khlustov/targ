@@ -15,7 +15,7 @@ export default function Header() {
                         <ul className={styles.navlinks}>
                             <li><a href="#services" style={{textDecoration: 'none', color: '#000'}}>Services</a></li>
                             <li><a href="#clients" style={{textDecoration: 'none', color: '#000'}}>Clients</a></li>
-                            <li><a href="#clients" style={{textDecoration: 'none', color: '#000'}}>Contact</a></li>
+                            <li><a href="#contacts" style={{textDecoration: 'none', color: '#000'}}>Contact</a></li>
                         </ul>
                     </nav>
                 </div>                

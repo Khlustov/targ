@@ -10,7 +10,7 @@ export default function Footer() {
     const [isSend, setIsSend] = useState(false)
 
     return (
-        <div className={styles.footer}>
+        <div className={styles.footer} id='contacts'>
             <div className={styles.footerWrapper}>
                 <div className={styles.footerImage}>
                     <StaticImage src='../images/footer-image.webp' alt="footer-image"/>
@@ -43,7 +43,9 @@ export default function Footer() {
                             required
                             >
                             </textarea>
-                            <button type='submit'>Send</button>
+                            <div className={styles.btnContainer}>
+                                <button type='submit'>Send</button>
+                            </div>
                         </form>
                     </div>    
                 </div>
