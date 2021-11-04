@@ -9,6 +9,29 @@ export default function Footer() {
     const [message, setMessage] = useState('')
     const [isSend, setIsSend] = useState(false)
 
+    const handleSubmit = async event => {
+        event.preventDefault()
+
+        if(name && email) {
+            const encodedName = encodeURIComponent(name)
+            const encodedEmail = encodeURIComponent(email)
+            const encodedMessage = encodeURIComponent(message)
+
+            const sentEmail = await (
+                await fetch(
+                    `/.netlify/functions/sendEmail?userName=${encodedName}&userEmail=${encodedEmail}&userMessege=${encodedMessage}`
+                )
+            ).json()
+
+            setIsSend(true)
+            setName('')
+            setEmail('')
+            setMessage('')
+            alert(`Messege sent, you can check it on ${sentEmail.previewURL}`)
+            console.log(sentEmail);
+        }
+    }
+
     return (
         <div className={styles.footer} id='contacts'>
             <div className={styles.footerWrapper}>
@@ -18,7 +41,7 @@ export default function Footer() {
                 <div className={styles.formLayout}>
                     <div className={styles.formContainer}>
                         <h4>Contact us</h4>
-                        <form className={styles.form}>
+                        <form className={styles.form} onSubmit={handleSubmit}>
                             <p>Your Name</p>
                             <input
                             placeholder='John Smith'
@@ -40,7 +63,7 @@ export default function Footer() {
                             rows={2}
                             onChange={e => setMessage(e.target.value)}
                             value={message}
-                            required
+                            // required
                             >
                             </textarea>
                             <div className={styles.btnContainer}>
